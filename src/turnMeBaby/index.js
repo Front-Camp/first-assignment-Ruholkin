@@ -14,7 +14,7 @@ const turnMeBaby = str => {
     newStr = newStr.join('');
     return newStr;
   } else {
-    throw 'this is not a string';
+    return Error("this is not a string");
   }
 };
 

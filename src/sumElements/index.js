@@ -12,7 +12,8 @@
  */
 const sumElements = arr => {
   let newArr = arr.filter(el => isElementFits(el));
-  newArr = newArr.reduce((accum, currentValue) => accum + parseInt(currentValue, 10));
+  newArr = newArr.map(el => parseFloat(el) >= parseInt(el) ? parseFloat(el) : parseInt(el));
+  newArr = newArr.reduce((accum, currentValue) => accum + currentValue);
   return newArr;
 };
 
