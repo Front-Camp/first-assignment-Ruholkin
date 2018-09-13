@@ -11,10 +11,10 @@ const turnMeBaby = str => {
   if (typeof str === 'string') {
     let newStr = str.split('');
     newStr.reverse();
-    newStr = newStr.toString();
+    newStr = newStr.join('');
     return newStr;
   } else {
-    throw 'Error;'
+    throw 'this is not a string';
   }
 };
 
