@@ -11,7 +11,14 @@
  * sumElements([Infinity, NaN, 1]); // 1
  */
 const sumElements = arr => {
-  /* your logic here...*/
+  let newArr = arr.filter(el => isElementFits(el));
+  newArr = newArr.reduce((accum, currentValue) => accum + parseInt(currentValue, 10));
+  return newArr;
 };
+
+function isElementFits(el) {
+  el = parseInt(el, 10);
+  return el !== Number.POSITIVE_INFINITY && el !== Number.NEGATIVE_INFINITY && typeof el === 'number' && !isNaN(el);
+}
 
 export default sumElements;
